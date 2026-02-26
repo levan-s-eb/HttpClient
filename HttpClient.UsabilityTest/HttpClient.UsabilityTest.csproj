@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HttpClient\Http.Client.csproj" />
+    <ProjectReference Include="..\HttpClient\HttpClient.csproj" />
   </ItemGroup>
 
 </Project>
