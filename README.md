@@ -1,4 +1,4 @@
-# Http.Client
+# HttpClient
 
 A configuration-driven library for registering resilient HTTP service clients in .NET applications. It combines [Refit](https://github.com/reactiveui/refit) typed clients with [Polly](https://github.com/App-vNext/Polly) resilience pipelines and validates all settings at startup so misconfigurations are caught before traffic is served.
 
@@ -185,4 +185,5 @@ builder.Services
 ```bash
 dotnet test
 ```
+
 
