@@ -11,8 +11,6 @@ A configuration-driven library for registering resilient HTTP service clients in
 | **Outer timeout** | A total timeout that covers the full request lifecycle including retries. |
 | **Retry** | Configurable retry policy with backoff strategy, jitter, per-attempt timeout, and a customisable list of retryable HTTP status codes. |
 | **Circuit breaker** | Opens the circuit on sustained failure rates to shed load and allow recovery. Failure status codes are fully configurable. |
-| **Startup validation** | All options are validated at application startup via FluentValidation -- invalid configuration prevents the app from starting. |
-| **Named options** | Each downstream service gets its own named `ServiceClientOptions`, so multiple services are configured independently. |
 
 ## Quick start
 
@@ -187,3 +185,4 @@ builder.Services
 ```bash
 dotnet test
 ```
+
