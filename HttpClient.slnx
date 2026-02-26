@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Http.Client.Tests/Http.Client.Tests.csproj" />
+  <Project Path="HttpClient/Http.Client.csproj" />
+  <Project Path="TestWebApi/TestWebApi.csproj" />
+</Solution>
