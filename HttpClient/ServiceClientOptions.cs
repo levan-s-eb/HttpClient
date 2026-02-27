@@ -1,7 +1,7 @@
 ﻿using Polly;
 using System.Net;
 
-namespace Http.Client;
+namespace HttpClient;
 
 /// <summary>
 /// Top-level configuration for a named HTTP service client.

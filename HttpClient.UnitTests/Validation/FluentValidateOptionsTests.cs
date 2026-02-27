@@ -1,7 +1,6 @@
-using Http.Client;
-using Http.Client.Validation;
+using HttpClient.Validation;
 
-namespace Http.Client.Tests.Validation;
+namespace HttpClient.UnitTests.Validation;
 
 public class FluentValidateOptionsTests
 {

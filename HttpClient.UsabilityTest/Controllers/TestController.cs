@@ -1,7 +1,7 @@
+using HttpClient.UsabilityTest.ServiceClients;
 using Microsoft.AspNetCore.Mvc;
-using TestWebApi.ServiceClients;
 
-namespace TestWebApi.Controllers
+namespace HttpClient.UsabilityTest.Controllers
 {
     [ApiController]
     [Route("[controller]")]

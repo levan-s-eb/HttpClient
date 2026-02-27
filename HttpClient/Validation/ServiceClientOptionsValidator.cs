@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Http.Client.Validation;
+namespace HttpClient.Validation;
 
 /// <summary>
 /// Validates a <see cref="ServiceClientOptions"/> instance, including conditional

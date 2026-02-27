@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Http.Client.Validation;
+namespace HttpClient.Validation;
 
 /// <summary>
 /// Validates <see cref="RetryOptions"/> when the retry policy is enabled.

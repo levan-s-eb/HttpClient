@@ -1,7 +1,7 @@
 using FluentValidation;
 using Microsoft.Extensions.Options;
 
-namespace Http.Client.Validation;
+namespace HttpClient.Validation;
 
 /// <summary>
 /// Bridges FluentValidation validators into the <see cref="IValidateOptions{TOptions}"/>

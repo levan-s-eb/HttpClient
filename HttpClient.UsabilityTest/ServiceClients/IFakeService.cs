@@ -1,6 +1,6 @@
 ﻿using Refit;
 
-namespace TestWebApi.ServiceClients;
+namespace HttpClient.UsabilityTest.ServiceClients;
 
 public interface IFakeService
 {

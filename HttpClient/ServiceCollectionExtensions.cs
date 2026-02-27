@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using Http.Client.Validation;
+using HttpClient.Validation;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Http.Resilience;
@@ -9,7 +9,7 @@ using Polly.Timeout;
 using Refit;
 using System.Net;
 
-namespace Http.Client;
+namespace HttpClient;
 
 /// <summary>
 /// Extension methods for registering resilient, configuration-driven HTTP service

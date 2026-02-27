@@ -1,4 +1,4 @@
-namespace TestWebApi
+namespace HttpClient.UsabilityTest
 {
     public class WeatherForecast
     {

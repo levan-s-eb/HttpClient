@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Http.Client.Validation;
+namespace HttpClient.Validation;
 
 /// <summary>
 /// Validates <see cref="CircuitBreakerOptions"/> when the circuit breaker is enabled.

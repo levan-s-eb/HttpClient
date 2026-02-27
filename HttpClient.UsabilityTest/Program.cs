@@ -1,5 +1,5 @@
-using Http.Client;
-using TestWebApi.ServiceClients;
+using HttpClient;
+using HttpClient.UsabilityTest.ServiceClients;
 
 var builder = WebApplication.CreateBuilder(args);
 
