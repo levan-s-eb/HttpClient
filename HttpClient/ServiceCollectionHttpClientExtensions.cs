@@ -27,8 +27,14 @@ namespace HttpClient;
 /// startup. Invalid configuration prevents the application from starting, providing
 /// fast feedback during deployment.
 /// </para>
+/// <para>
+/// Configuration changes are picked up at runtime: the resilience pipeline is
+/// automatically rebuilt when the underlying <see cref="ServiceClientOptions"/>
+/// instance changes (e.g. when <c>appsettings.json</c> is modified while the
+/// application is running).
+/// </para>
 /// </remarks>
-public static class ServiceCollectionExtensions
+public static class ServiceCollectionHttpClientExtensions
 {
     /// <summary>
     /// Registers a Refit-based HTTP service client for the interface <typeparamref name="TApi"/>
@@ -89,6 +95,10 @@ public static class ServiceCollectionExtensions
     ///   <item><description>Circuit breaker (optional) — opens the circuit on sustained failures.</description></item>
     ///   <item><description>Per-attempt timeout — cancels a single attempt that exceeds the limit.</description></item>
     /// </list>
+    /// <para>
+    /// The pipeline is rebuilt automatically when the named <see cref="ServiceClientOptions"/>
+    /// changes at runtime, thanks to <see cref="ResilienceHandlerContext.EnableReloads{TOptions}"/>.
+    /// </para>
     /// </remarks>
     private static void RegisterClient<TApi>(
         this IServiceCollection services,
@@ -104,6 +114,8 @@ public static class ServiceCollectionExtensions
             })
             .AddResilienceHandler(serviceName, (pipeline, context) =>
             {
+                context.EnableReloads<ServiceClientOptions>(serviceName);
+
                 var options = context.ServiceProvider.GetRequiredService<IOptionsMonitor<ServiceClientOptions>>().Get(serviceName);
 
                 pipeline.AddConcurrencyLimiter(options.ConcurrencyLimitOptions.Limit, options.ConcurrencyLimitOptions.QueueSize);
